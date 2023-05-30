@@ -1,4 +1,4 @@
-# LeafyDialogue
+# Leafy Dialogue
 A basic multiple choice dialogue system for the Unity3D game engine.
 
 This tool is very not likely to get updated as I just made it for a school project. I am currently working on a more robust and advanced 
