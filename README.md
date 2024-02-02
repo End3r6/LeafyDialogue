@@ -1,8 +1,8 @@
 # Leafy Dialogue
-A basic multiple choice dialogue system for the Unity3D game engine.
+A basic multiple-choice dialogue system for the Unity3D game engine.
 
-This tool is very not likely to get updated as I just made it for a school project. I am currently working on a more robust and advanced 
-system that is will come out eventually. Until then, enjoy this.
+This tool is very unlikely to get updated as I just made it for a school project. I am currently working on a more robust and advanced 
+system that will come out eventually. Until then, enjoy this.
 
 # List of Features
 - Broadcasting messages
@@ -10,4 +10,4 @@ system that is will come out eventually. Until then, enjoy this.
 - Triggering Audio
 - Multiple Choice
 
-To subscribe to a message, call Messenger.AddListener("Your message here", your function here). It uses an updated verion of the Unity Messenger class from the old unity wiki.
+To subscribe to a message, call Messenger.AddListener("Your message here", your function here). It uses an updated version of the Unity Messenger class from the old Unity Wiki.
