@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class ButtonChoiceBroadcaster : MonoBehaviour
 {
-    public int choiceBranchIndex { get; set; }
+    public string choiceBranchName { get; set; }
 
-    public void Broadcast()
+    public void BroadcastName()
     {
-        Messenger<int>.Broadcast("ChoiceMade", choiceBranchIndex);
+        Messenger<string>.Broadcast("ChoiceMade", choiceBranchName);
     }
 }

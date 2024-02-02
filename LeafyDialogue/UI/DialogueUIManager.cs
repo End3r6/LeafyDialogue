@@ -21,7 +21,7 @@ public class DialogueUIManager : MonoBehaviour
 
     private void Start()
     {
-        Messenger<int>.AddListener("ChoiceMade", OnChoice);    
+        Messenger<string>.AddListener("ChoiceMade", OnChoice);    
     }
 
     public void RequestNextLeaf()
@@ -58,9 +58,9 @@ public class DialogueUIManager : MonoBehaviour
         dialogueText.text = currentLeaf.text;
     }
 
-    private void OnChoice(int choiceBranchIndex)
+    private void OnChoice(string choiceBranchName)
     {
-        RequestTraverse(choiceBranchIndex);
+        RequestTraverse(choiceBranchName);
     }
 
     private void GetChoices(DialogueLeaf leaf)
@@ -71,7 +71,7 @@ public class DialogueUIManager : MonoBehaviour
             button.transform.SetParent(buttonGroup);
             button.transform.GetChild(0).GetComponent<TMP_Text>().text = choice.text;
 
-            button.GetComponent<ButtonChoiceBroadcaster>().choiceBranchIndex = choice.branchID;
+            button.GetComponent<ButtonChoiceBroadcaster>().choiceBranchName = choice.branchName;
 
             buttons.Add(button);
         }
@@ -85,8 +85,8 @@ public class DialogueUIManager : MonoBehaviour
         }
     }
 
-    private void RequestTraverse(int branchIndex)
+    private void RequestTraverse(string branchName)
     {
-        currentReader.TraverseTree(branchIndex);
+        currentReader.TraverseTree(branchName);
     }
 }

@@ -8,8 +8,8 @@ public class TriggerByDistance : MonoBehaviour
     [Tooltip("The distance the object has to be in to trigger the reader")]
     [SerializeField] private float distance = 3.0f;
 
-    [Tooltip("The branch the trigger starts once it is triggered. 0 means it will start from the beginning.")]
-    [SerializeField] private int treeBranch = 0;
+    [Tooltip("The branch the trigger starts once it is triggered.")]
+    [SerializeField] private string treeBranch;
 
     [Tooltip("The key the player has to press to trigger the reader")]
     [SerializeField] private KeyCode triggerKey = KeyCode.E;

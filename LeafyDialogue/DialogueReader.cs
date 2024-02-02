@@ -31,6 +31,33 @@ public class DialogueReader : MonoBehaviour
         GetNextLeaf();
     }
 
+    public void TraverseTree(string brancName)
+    {
+        //Set this reader to the uiManager.
+        uiManager.currentReader = this;
+
+        int branchIndex = 0;
+
+        foreach(var branch in tree.branches)
+        {
+            branchIndex ++;
+            if(brancName == branch.name)
+            {
+                branchIndex --;
+                break;
+            }
+        }
+
+        //Grab all of the branches in the current tree.
+        foreach (var leaf in tree.branches[branchIndex].leaves)
+        {
+            currentBranchLeaves.Enqueue(leaf);
+        }
+        
+        //Get the Next Leaf, in this case, it is the first one
+        GetNextLeaf();
+    }
+
     //The function used to trigger any animations inside of the leaf
     private void TriggerLeafAnimation(DialogueLeaf leaf)
     {
